@@ -28,8 +28,8 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ClawPilot",
-  description: "Your AI Agent. Ready in 60 Seconds."
+  title: "QuickClaw",
+  description: "Launch your OpenClaw and add skills in 60 seconds."
 };
 
 export default function RootLayout({

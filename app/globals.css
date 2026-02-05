@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0a0a0a;
+  background-image: radial-gradient(circle at top, rgba(230, 57, 70, 0.16), transparent 60%),
+    radial-gradient(circle at 20% 20%, rgba(46, 196, 182, 0.12), transparent 45%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 30%);
+  min-height: 100vh;
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+::selection {
+  background: rgba(230, 57, 70, 0.4);
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.glow-ring {
+  box-shadow: 0 0 25px rgba(230, 57, 70, 0.4), inset 0 0 15px rgba(230, 57, 70, 0.25);
+}
+
+.terminal-text {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+.hero-grid {
+  background-image: linear-gradient(transparent 95%, rgba(255, 255, 255, 0.04) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255, 255, 255, 0.04) 96%);
+  background-size: 40px 40px;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 12px rgba(230, 57, 70, 0.45);
+  }
+  .border-glow {
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.35);
+  }
+}
